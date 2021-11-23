@@ -20,6 +20,7 @@
 }
 
 .button {
+    margin: 5px;
     box-sizing: border-box;    
     display: flex;
     align-items: center;
@@ -27,11 +28,13 @@
     color: #fff;
     font-size: xx-large;
     cursor: pointer;
-    padding: 15px;    
+    padding: 25px;    
     border: 0;
     background-color: rgb(87, 17, 153);
     border-radius: 15%;
     z-index: 1;
+    min-width: 100px;
+    width: 10vw;
 }
 
 #toolbar {
@@ -42,7 +45,7 @@
 
 .button:hover {    
     border: 5px solid purple;
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(87, 17, 153);
     color: green;    
 }

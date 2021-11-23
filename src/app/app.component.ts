@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as LZString from 'lz-string';
 
 const maxHeight = 100;
 const maxWidth = 100;
@@ -67,7 +68,7 @@ export class AppComponent implements OnInit{
 
   save(){
     this.processAction( ()=> {      
-      localStorage.setItem('canvas', this.canvas2str(this.canvas));    
+      localStorage.setItem('canvas', LZString.compressToEncodedURIComponent(this.canvas2str(this.canvas)));    
     });
   }
 
@@ -82,7 +83,7 @@ export class AppComponent implements OnInit{
   load(){    
     this.processAction( ()=> {
       this.canvas = this.str2canvas(
-        localStorage.getItem('canvas') || ''
+        LZString.decompressFromEncodedURIComponent( localStorage.getItem('canvas') || '') || ''
       );
       if(this.canvas.length===0)
         this.initCanvas();
