@@ -58,8 +58,8 @@ export class HomeComponent implements OnInit {
       action();
       setTimeout(() => {
         this.processing = false;
-      });
-    });
+      },100);
+    },100);
             
   }
 

@@ -18,10 +18,12 @@
   </button>
 </mat-toolbar>
 
-<div id="canvas">
-  <div *ngFor="let pixel of canvas" class="pixel color-{{pixel.color}}" (click)="pixelClick(pixel)"></div>
+<div id="content">
+  <div id="canvas">
+    <div *ngFor="let pixel of canvas" class="pixel color-{{pixel.color}}" (click)="pixelClick(pixel)"></div>
+  </div>
 </div>
 
 <div id="overlay" *ngIf="processing">
-  <h1>Aguarde</h1>
+  <h1>Wait a moment please!</h1>
 </div>

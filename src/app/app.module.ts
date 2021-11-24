@@ -10,6 +10,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import {ClipboardModule} from '@angular/cdk/clipboard';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {ClipboardModule} from '@angular/cdk/clipboard';
     MatButtonModule,
     MatIconModule,
     ClipboardModule,
+    MatCardModule,
     
     BrowserAnimationsModule
   ],
