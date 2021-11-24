@@ -1,0 +1,27 @@
+<mat-toolbar id="tool-bar" color="primary">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Paint</span>
+  <span class="spacer"></span>
+  <button mat-icon-button (click)="clear()">
+      <mat-icon>clear</mat-icon>
+  </button>
+  <button mat-icon-button (click)="load()">
+      <mat-icon>restore</mat-icon>
+  </button>
+  <button mat-icon-button (click)="save()">
+      <mat-icon>save</mat-icon>
+  </button>
+  <button mat-icon-button (click)="share()">
+      <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div id="canvas">
+  <div *ngFor="let pixel of canvas" class="pixel color-{{pixel.color}}" (click)="pixelClick(pixel)"></div>
+</div>
+
+<div id="overlay" *ngIf="processing">
+  <h1>Aguarde</h1>
+</div>

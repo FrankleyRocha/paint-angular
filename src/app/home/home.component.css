@@ -1,0 +1,48 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+#canvas {
+    margin-top: 64px;
+    display: grid;
+    grid-template-columns: repeat(100,25px);
+    grid-template-rows: repeat(100,25px);
+    z-index: 0;
+}
+
+.pixel {
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+}
+
+.color-0 {
+    background-color: white;
+}
+
+.color-1 {
+    background-color: black;
+}
+
+#tool-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+#overlay {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: xx-large;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: .5;
+    z-index: 999;
+}
